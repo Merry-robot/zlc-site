@@ -5,6 +5,6 @@ vZLC ARTCCc Website
 * steps to run
 
 
-```  bun install 1 ```
+``` bun install ```
 
 ``` bun run dev ```
