@@ -23,9 +23,7 @@ function StaffCard({ staff, open, onClick }: { staff: any, open: boolean, onClic
           {Array.isArray(staff.roles)
             ? staff.roles
                 .filter((role: string, _idx: number, arr: string[]) => {
-                  // Remove team roles and 'events' role
                   if (["events_team", "facilities_team", "events", "facilities"].includes(role)) return false;
-                  // If TA is present, filter out instructor
                   if (arr.includes("ta")) return role !== "instructor";
                   return true;
                 })
@@ -39,7 +37,6 @@ function StaffCard({ staff, open, onClick }: { staff: any, open: boolean, onClic
                     ec: "Events Coordinator",
                     instructor: "Instructor",
                     mentor: "Mentor",
-                    // Add more as needed
                   };
                   return <li key={role}>{roleMap[role] || role}</li>;
                 })
@@ -59,7 +56,6 @@ const StaffPage = () => {
     fetch("https://api.zlcartcc.org/v1/user/staff")
       .then((res) => res.ok ? res.json() : {})
       .then((data) => {
-        // Group staff by CID, merging roles for users with multiple roles
         const staffByCid: Record<string, any> = {};
         Object.entries(data).forEach(([role, arr]) => {
           if (Array.isArray(arr)) {
