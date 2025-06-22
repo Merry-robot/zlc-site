@@ -117,6 +117,27 @@ const StaffPage = () => {
               <li>Elijah Jubrey</li>
             </ul>
           </div>
+          <div className="bg-stone-900 border border-stone-800 rounded-lg shadow-lg p-6 text-center overflow-hidden">
+            <h2 className="text-2xl font-bold text-white mb-2">Web Team</h2>
+            <p className="text-stone-300 mb-4">Assists the Webmaster.</p>
+            <ul className="text-stone-200 space-y-1">
+              <li>Cameron Negrete</li>
+              <li>Adam Earl</li>
+            </ul>
+          </div>
+          <div className="bg-stone-900 border border-stone-800 rounded-lg shadow-lg p-6 text-center overflow-hidden">
+            <h2 className="text-2xl font-bold text-white mb-2">Training Staff</h2>
+            <p className="text-stone-300 mb-4">Assists the Training Administrator.</p>
+            <ul className="text-stone-200 space-y-1">
+              <li>Cameron Negrete - INS</li>
+              <li>Harry Linsenmayer - INS</li>
+              <li>Daniel Kormendy - INS</li>
+              <li>Evan McSweeny - INS</li>
+              <li>Andres Honegger - MTR</li>
+              <li>Adam Earl - MTR</li>
+              <li>Elijah Jubrey - MTR</li>
+            </ul>
+          </div>
         </div>
       </div>
     </main>
