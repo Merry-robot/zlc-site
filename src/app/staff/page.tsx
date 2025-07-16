@@ -37,6 +37,7 @@ function StaffCard({ staff, open, onClick }: { staff: any, open: boolean, onClic
                     ec: "Events Coordinator",
                     instructor: "Instructor",
                     mentor: "Mentor",
+                    mit: "Mentor-in-Training",
                   };
                   return <li key={role}>{roleMap[role] || role}</li>;
                 })

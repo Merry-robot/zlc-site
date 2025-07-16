@@ -50,6 +50,13 @@ const RosterPage = () => {
                         className="bg-stone-800 text-stone-200 px-4 py-2 rounded text-lg font-extrabold shadow-lg"
                         style={{ fontSize: "1.5rem", minWidth: "3rem", textAlign: "center" }}
                     >
+                {/* Show ZLC rating if present */}
+                {member.certifications?.zlc?.value && member.certifications.zlc.value !== "none" && (
+                    <div className="text-sm text-yellow-300 mb-1">
+                        <span className="font-semibold">ZLC Rating: </span>
+                        {member.certifications.zlc.display_name || member.certifications.zlc.value}
+                    </div>
+                )}
                         {member.operating_initials || "N/A"}
                     </span>
                 </div>
@@ -75,6 +82,13 @@ const RosterPage = () => {
                         ) : null;
                     })}
                 </div>
+                {/* Show ZLC rating if present */}
+                {member.certifications?.zlc?.value && member.certifications.zlc.value !== "none" && (
+                    <div className="text-sm text-yellow-300 mb-1">
+                        <span className="font-semibold">ZLC Rating: </span>
+                        {member.certifications.zlc.display_name || member.certifications.zlc.value}
+                    </div>
+                )}
                 <div className="text-sm text-stone-400 mb-1">
                     <span className="font-semibold">Rating: </span>
                     {member.rating || "N/A"}
